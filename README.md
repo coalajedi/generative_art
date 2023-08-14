@@ -46,7 +46,7 @@ contains the `CustomPainter`, and draw the shapes using a simple `for` loop.
 
 Result:
 
-![Tiling - Generative Art Tool](assets/tiling_generative_art_tool.mov)
+https://github.com/coalajedi/generative_art/assets/42309863/06297123-80f2-4289-bd3e-f7bf2dc9bb81
 
 ## Run the project
 
