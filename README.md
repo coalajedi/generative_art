@@ -56,6 +56,16 @@ squares, were implemented recursion in a way that is inspired by one of Ver Moln
 The result so far:
 <img width="1129" alt="Recursively drawn squares — Recursion as a generative art tool #2" src="https://github.com/coalajedi/generative_art/assets/42309863/5b48fbde-b7f5-4a31-b5a7-310feeae3edd">
 
+## Randomness - Generative Art Tool #3
+This wouldn’t be a work inspired by Vera Molnar if it did not include what fascinated her the most, randomness, which is actually a powerful tool that can result in truly mesmerizing outcomes.
+
+We can introduce randomness here in a couple of ways:
+- Randomizing the side length of the next square in the recursive function.
+- Introducing a randomized depth value that would eventually randomize the size of the smallest square.
+
+The outcome:
+<img width="1386" alt="Recursively drawn square with randomization — Randomness as a generative art tool #3" src="https://github.com/coalajedi/generative_art/assets/42309863/0fef8ff2-3f1d-401a-9c8c-780f24e38e08">
+
 
 ## Run the project
 
