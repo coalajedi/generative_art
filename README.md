@@ -48,6 +48,15 @@ Result:
 
 https://github.com/coalajedi/generative_art/assets/42309863/06297123-80f2-4289-bd3e-f7bf2dc9bb81
 
+## Recursion - Generative Art Tool #2
+Using the programming power of recursion to create artwork elements that can appear repeatedly nested until one or more 
+conditions are met, gives endless possibilities for manipulating lines and shapes in your canvas. For our grid of 
+squares, were implemented recursion in a way that is inspired by one of Ver Molnar's artworks.
+
+The result so far:
+<img width="1129" alt="Recursively drawn squares — Recursion as a generative art tool #2" src="https://github.com/coalajedi/generative_art/assets/42309863/5b48fbde-b7f5-4a31-b5a7-310feeae3edd">
+
+
 ## Run the project
 
 A few resources to get you started if this is your first Flutter project:
