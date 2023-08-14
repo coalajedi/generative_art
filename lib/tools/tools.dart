@@ -22,28 +22,6 @@
  * SOFTWARE.
  */
 
-import 'package:flutter/material.dart';
-
-import 'tools/tools.dart';
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Generative Art',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const RandomizedRecursiveSquaresGrid(
-        sideLength: 100,
-        strokeWidth: 1,
-        gap: 20,
-        minSquareSideFraction: 0.1,
-      ),
-    );
-  }
-}
+export 'randomized_recursive_squares_grid.dart';
+export 'raw_recursive_squares_grid.dart';
+export 'squares_grid.dart';
