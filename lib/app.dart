@@ -24,7 +24,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'squares_grid.dart';
+import 'raw_recursive_squares_grid.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -38,7 +38,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SquaresGridWidget(),
+      home: const RawRecursiveSquaresGrid(
+        sideLength: 100,
+        strokeWidth: 1,
+        gap: 20,
+        minSquareSideFraction: 0.1,
+      ),
     );
   }
 }
