@@ -23,6 +23,7 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:generative_art/tools/recursive_squares_grid.dart';
 import 'package:generative_art/tools/tools.dart';
 import 'package:widgetbook/widgetbook.dart';
 
@@ -151,6 +152,60 @@ class WidgetBookApp extends StatelessWidget {
                             min: 0,
                             max: 50,
                             divisions: 50,
+                          ),
+                        ),
+                      ),
+                    ),
+                    WidgetbookUseCase(
+                      name: 'Playground',
+                      builder: (context) => SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height,
+                        child: RecursiveSquareGrid(
+                          sideLength: context.knobs.double.slider(
+                            label: 'Side Length',
+                            initialValue: 80,
+                            min: 30,
+                            max: 200,
+                          ),
+                          strokeWidth: context.knobs.double.slider(
+                            label: 'Stroke Width',
+                            initialValue: 1.5,
+                            min: 0.5,
+                            max: 3.5,
+                            divisions: 6,
+                          ),
+                          gap: context.knobs.double.slider(
+                            label: 'Gap',
+                            initialValue: 5,
+                            min: 0,
+                            max: 50,
+                            divisions: 50,
+                          ),
+                          minSquareSideFraction: context.knobs.double.slider(
+                            label: 'Min Square Side Fraction',
+                            initialValue: 0.2,
+                            min: 0.1,
+                            max: 0.7,
+                            divisions: 6,
+                          ),
+                          saturation: context.knobs.double.slider(
+                            label: 'Saturation',
+                            min: 0,
+                            max: 1.0,
+                            divisions: 10,
+                            initialValue: 0.7,
+                          ),
+                          lightness: context.knobs.double.slider(
+                            label: 'Lightness',
+                            min: 0,
+                            max: 1.0,
+                            divisions: 10,
+                            initialValue: 0.5,
+                          ),
+                          enableColors: context.knobs.boolean(
+                            label: 'Enable Colors',
+                            initialValue: true,
                           ),
                         ),
                       ),
