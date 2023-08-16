@@ -76,6 +76,11 @@ Using the Widgetbook package we can experiment with `maxCornerOffset` input and 
 
 https://github.com/coalajedi/generative_art/assets/42309863/2b355161-1e9d-44c1-ab09-b55f2956174d
 
+## Repetition - Generative Art Tool #5
+As a final tool in our generative art tool belt, we can implement some repetition simply by using a `for` loop with `min` and `max` values that we can provide as input parameters to the system.
+
+https://github.com/coalajedi/generative_art/assets/42309863/46327a44-8072-475a-8b2f-4b52cd4355dc
+
 ## Run the project
 
 A few resources to get you started if this is your first Flutter project:
