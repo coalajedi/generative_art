@@ -66,6 +66,15 @@ We can introduce randomness here in a couple of ways:
 The outcome:
 <img width="1386" alt="Recursively drawn square with randomization — Randomness as a generative art tool #3" src="https://github.com/coalajedi/generative_art/assets/42309863/0fef8ff2-3f1d-401a-9c8c-780f24e38e08">
 
+## Displacement - Generative Art Tool #4
+When it comes to generative art, chaos is a good thing! And we can throw some chaos at the Artwork by utilizing another useful tool, _displacement_.
+
+For example, going back to our original square, I can say that I want to displace each corner from its original place by _randomized_ distance to create a randomized polygon.
+This way combining displacement with randomness for yet a deeper level of chaos.
+
+Using the Widgetbook package we can experiment with `maxCornerOffset` input and see how the polygon gets more distorted as this value increases and vice versa.
+
+https://github.com/coalajedi/generative_art/assets/42309863/2b355161-1e9d-44c1-ab09-b55f2956174d
 
 ## Run the project
 
