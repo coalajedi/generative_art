@@ -286,6 +286,39 @@ class WidgetBookApp extends StatelessWidget {
                     ),
                   ],
                 ),
+                WidgetbookComponent(
+                  name: 'Distorted Polygon Set',
+                  useCases: [
+                    WidgetbookUseCase(
+                      name: 'Playground',
+                      builder: (context) => DistortedPolygonSet(
+                        minRepetition: context.knobs.double
+                            .slider(
+                              label: 'Minimum Repetition',
+                              initialValue: 20,
+                              divisions: 99,
+                              min: 1,
+                              max: 100,
+                            )
+                            .toInt(),
+                        strokeWidth: context.knobs.double.slider(
+                          label: 'Stroke Width',
+                          initialValue: 5,
+                          divisions: 9,
+                          min: 0.5,
+                          max: 5,
+                        ),
+                        maxCornersOffset: context.knobs.double.slider(
+                          label: 'Maximum Corner Offset',
+                          initialValue: 20,
+                          divisions: 100,
+                          min: 0,
+                          max: 100,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ],
