@@ -354,6 +354,33 @@ class WidgetBookApp extends StatelessWidget {
                       ),
                     ),
                     WidgetbookUseCase(
+                      name: 'Gallery',
+                      builder: (context) => GalleryPolygonsGrid(
+                        enableColors: context.knobs.boolean(
+                          label: 'Enable Colors',
+                          initialValue: true,
+                        ),
+                        oneColorPerSet: context.knobs.boolean(
+                          label: 'One Color Per Set',
+                          initialValue: false,
+                        ),
+                        saturation: context.knobs.double.slider(
+                          label: 'Saturation',
+                          min: 0,
+                          max: 1.0,
+                          divisions: 10,
+                          initialValue: 0.7,
+                        ),
+                        lightness: context.knobs.double.slider(
+                          label: 'Lightness',
+                          min: 0,
+                          max: 1.0,
+                          divisions: 10,
+                          initialValue: 0.5,
+                        ),
+                      ),
+                    ),
+                    WidgetbookUseCase(
                       name: 'Playground',
                       builder: (context) => DistortedPolygonSet(
                         minRepetition: context.knobs.double
@@ -383,6 +410,105 @@ class WidgetBookApp extends StatelessWidget {
                     ),
                   ],
                 ),
+                WidgetbookComponent(
+                  name: 'Animated Polygons',
+                  useCases: [
+                    WidgetbookUseCase(
+                      name: 'Raw',
+                      builder: (context) => AnimatedDistortedPolygonSet(
+                        minRepetition: context.knobs.double
+                            .slider(
+                              label: 'Minimum Repetition',
+                              initialValue: 30,
+                              divisions: 99,
+                              min: 1,
+                              max: 100,
+                            )
+                            .toInt(),
+                        strokeWidth: context.knobs.double.slider(
+                          label: 'Stroke Width',
+                          initialValue: 2,
+                          divisions: 9,
+                          min: 0.5,
+                          max: 5,
+                        ),
+                        maxCornersOffset: context.knobs.double.slider(
+                          label: 'Maximum Corner Offset',
+                          initialValue: 20,
+                          divisions: 100,
+                          min: 0,
+                          max: 100,
+                        ),
+                      ),
+                    ),
+                    WidgetbookUseCase(
+                      name: 'Playground',
+                      builder: (context) => AnimatedDistortedPolygonsGrid(
+                        enableAnimation: context.knobs.boolean(
+                          label: 'Enable Animation',
+                          initialValue: true,
+                        ),
+                        enableColors: context.knobs.boolean(
+                          label: 'Enable Colors',
+                          initialValue: true,
+                        ),
+                        oneColorPerSet: context.knobs.boolean(
+                          label: 'One Color Per Set',
+                          initialValue: false,
+                        ),
+                        minRepetition: context.knobs.double
+                            .slider(
+                              label: 'Minimum Repetition',
+                              initialValue: 50,
+                              min: 1,
+                              max: 100,
+                              divisions: 99,
+                            )
+                            .toInt(),
+                        strokeWidth: context.knobs.double.slider(
+                          label: 'Stroke Width',
+                          initialValue: 1.0,
+                          min: 0.5,
+                          max: 3.5,
+                          divisions: 6,
+                        ),
+                        maxSideLength: context.knobs.double.slider(
+                          label: 'Square Side Length',
+                          initialValue: 80,
+                          min: 30,
+                          max: 200,
+                        ),
+                        gap: context.knobs.double.slider(
+                          label: 'Gap',
+                          initialValue: 30,
+                          min: 0,
+                          max: 50,
+                        ),
+                        maxCornersOffset: context.knobs.double.slider(
+                          label: 'Max Corners Offset',
+                          initialValue: 3,
+                          min: 0,
+                          max: 12,
+                          divisions: 12,
+                        ),
+                        saturation: context.knobs.double.slider(
+                          label: 'Saturation',
+                          min: 0,
+                          max: 1.0,
+                          divisions: 10,
+                          initialValue: 0.5,
+                        ),
+                        lightness: context.knobs.double.slider(
+                          label: 'Lightness',
+                          min: 0,
+                          max: 1.0,
+                          divisions: 10,
+                          initialValue: 0.5,
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ],

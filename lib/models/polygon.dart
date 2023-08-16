@@ -22,6 +22,8 @@
  * SOFTWARE.
  */
 
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 
 import 'location.dart';
@@ -53,7 +55,7 @@ class Polygon {
   final Color color;
   final double level;
   final Location location;
-  final Image? image;
+  final ui.Image? image;
 
   bool get animationEnabled => true;
 
