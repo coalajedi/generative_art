@@ -22,9 +22,22 @@
  * SOFTWARE.
  */
 
-export 'distorted_polygon.dart';
-export 'randomized_recursive_squares_grid.dart';
-export 'raw_distorted_polygon.dart';
-export 'raw_recursive_squares_grid.dart';
-export 'recursive_squares_grid.dart';
-export 'squares_grid.dart';
+class Location {
+  const Location({
+    required this.x,
+    required this.y,
+  });
+
+  const Location.zero({
+    this.x = 0,
+    this.y = 0,
+  });
+
+  const Location.one({
+    this.x = 1.0,
+    this.y = 1.0,
+  });
+
+  final double x;
+  final double y;
+}

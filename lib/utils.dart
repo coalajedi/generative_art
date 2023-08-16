@@ -22,9 +22,18 @@
  * SOFTWARE.
  */
 
-export 'distorted_polygon.dart';
-export 'randomized_recursive_squares_grid.dart';
-export 'raw_distorted_polygon.dart';
-export 'raw_recursive_squares_grid.dart';
-export 'recursive_squares_grid.dart';
-export 'squares_grid.dart';
+import 'dart:math';
+import 'dart:ui';
+
+Offset randomOffsetFromRange({
+  required Random random,
+  required double maxOffset,
+  double? minOffset,
+}) {
+  minOffset ??= -maxOffset;
+
+  return Offset(
+    minOffset + random.nextDouble() * (maxOffset - minOffset),
+    minOffset + random.nextDouble() * (maxOffset - minOffset),
+  );
+}

@@ -23,11 +23,10 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:generative_art/tools/recursive_squares_grid.dart';
-import 'package:generative_art/tools/tools.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 import 'themes.dart';
+import 'tools/tools.dart';
 
 void main() {
   runApp(const WidgetBookApp());
@@ -118,7 +117,7 @@ class WidgetBookApp extends StatelessWidget {
                             divisions: 50,
                           ),
                           minSquareSideFraction: context.knobs.double.slider(
-                            label: 'Min Square Side Fraction',
+                            label: 'Minimum Square Side Fraction',
                             initialValue: 0.2,
                             min: 0.1,
                             max: 0.7,
@@ -183,7 +182,7 @@ class WidgetBookApp extends StatelessWidget {
                             divisions: 50,
                           ),
                           minSquareSideFraction: context.knobs.double.slider(
-                            label: 'Min Square Side Fraction',
+                            label: 'Minimum Square Side Fraction',
                             initialValue: 0.2,
                             min: 0.1,
                             max: 0.7,
@@ -207,6 +206,81 @@ class WidgetBookApp extends StatelessWidget {
                             label: 'Enable Colors',
                             initialValue: true,
                           ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                WidgetbookComponent(
+                  name: 'Distorted Polygon',
+                  useCases: [
+                    WidgetbookUseCase(
+                      name: 'Raw',
+                      builder: (context) => RawDistortedPolygon(
+                        strokeWidth: context.knobs.double.slider(
+                          label: 'Stroke Width',
+                          initialValue: 5,
+                          divisions: 9,
+                          min: 0.5,
+                          max: 5,
+                        ),
+                        maxCornersOffset: context.knobs.double.slider(
+                          label: 'Maximum Corner Offset',
+                          initialValue: 20,
+                          divisions: 100,
+                          min: 0,
+                          max: 100,
+                        ),
+                        maxSideLength: context.knobs.double.slider(
+                          label: 'Maximum Side Length',
+                          initialValue: 250,
+                          divisions: 220,
+                          min: 30,
+                          max: 250,
+                        ),
+                        minRepetition: context.knobs.double
+                            .slider(
+                              label: 'Minimum Repetition',
+                              initialValue: 30,
+                              divisions: 99,
+                              min: 1,
+                              max: 100,
+                            )
+                            .toInt(),
+                        maxRepetition: context.knobs.double
+                            .slider(
+                              label: 'Maximum Repetition',
+                              initialValue: 100,
+                              divisions: 99,
+                              min: 1,
+                              max: 100,
+                            )
+                            .toInt(),
+                      ),
+                    ),
+                    WidgetbookUseCase(
+                      name: 'Playground',
+                      builder: (context) => DistortedPolygon(
+                        strokeWidth: context.knobs.double.slider(
+                          label: 'Stroke Width',
+                          initialValue: 5,
+                          divisions: 9,
+                          min: 0.5,
+                          max: 5,
+                        ),
+                        maxCornersOffset: context.knobs.double.slider(
+                          label: 'Maximum Corner Offset',
+                          initialValue: 20,
+                          divisions: 100,
+                          min: 0,
+                          max: 100,
+                        ),
+                        minSquareSideFraction: context.knobs.double.slider(
+                          label: 'Minimum Square Side Fraction',
+                          initialValue: 0.5,
+                          min: 0.1,
+                          max: 0.7,
+                          divisions: 6,
                         ),
                       ),
                     ),
