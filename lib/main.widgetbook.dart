@@ -290,6 +290,70 @@ class WidgetBookApp extends StatelessWidget {
                   name: 'Distorted Polygon Set',
                   useCases: [
                     WidgetbookUseCase(
+                      name: 'Grid',
+                      builder: (context) => DistortedPolygonGrid(
+                        enableRepetition: context.knobs.boolean(
+                          label: 'Enable Repetition',
+                          initialValue: true,
+                        ),
+                        enableColors: context.knobs.boolean(
+                          label: 'Enable Colors',
+                          initialValue: true,
+                        ),
+                        minRepetition: context.knobs.double
+                            .slider(
+                              label: 'Minimum Repetition',
+                              initialValue: 10,
+                              divisions: 99,
+                              min: 1,
+                              max: 100,
+                            )
+                            .toInt(),
+                        strokeWidth: context.knobs.double.slider(
+                          label: 'Stroke Width',
+                          initialValue: 2.5,
+                          divisions: 9,
+                          min: 0.5,
+                          max: 5,
+                        ),
+                        maxSideLength: context.knobs.double.slider(
+                          label: 'Polygon Side Length',
+                          initialValue: 80,
+                          divisions: 470,
+                          min: 30,
+                          max: 500,
+                        ),
+                        gap: context.knobs.double.slider(
+                          label: 'Gap',
+                          initialValue: 30,
+                          min: 0,
+                          max: 50,
+                          divisions: 50,
+                        ),
+                        maxCornersOffset: context.knobs.double.slider(
+                          label: 'Maximum Corner Offset',
+                          initialValue: 5,
+                          divisions: 100,
+                          min: 0,
+                          max: 100,
+                        ),
+                        saturation: context.knobs.double.slider(
+                          label: 'Saturation',
+                          min: 0,
+                          max: 1.0,
+                          divisions: 10,
+                          initialValue: 0.7,
+                        ),
+                        lightness: context.knobs.double.slider(
+                          label: 'Lightness',
+                          min: 0,
+                          max: 1.0,
+                          divisions: 10,
+                          initialValue: 0.5,
+                        ),
+                      ),
+                    ),
+                    WidgetbookUseCase(
                       name: 'Playground',
                       builder: (context) => DistortedPolygonSet(
                         minRepetition: context.knobs.double

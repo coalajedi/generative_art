@@ -24,6 +24,7 @@
 
 export 'distorted_polygon.dart';
 export 'distorted_polygon_set.dart';
+export 'distorted_polygons_grid.dart';
 export 'randomized_recursive_squares_grid.dart';
 export 'raw_distorted_polygon.dart';
 export 'raw_recursive_squares_grid.dart';
